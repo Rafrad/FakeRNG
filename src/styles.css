@@ -95,8 +95,20 @@ button {
   transition: background-color 0.5s, color 0.5s;
 }
 
-.btn:hover {
+.btn:hover:not([disabled]) {
   background-color: rgba(255, 255, 255, 0.6);
+  color: rgb(109, 109, 109);
+}
+
+.btn:hover:disabled {
+  cursor: wait;
+  background-color: rgb(179, 179, 179);
+  color: rgb(109, 109, 109);
+}
+
+.btn:disabled {
+  cursor: wait;
+  background-color: rgb(179, 179, 179);
   color: rgb(109, 109, 109);
 }
 
