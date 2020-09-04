@@ -1,0 +1,129 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(116, 116, 250);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+#app {
+  align-items: center;
+  align-content: center;
+}
+
+#number {
+  text-align: center;
+  font-size: 50px;
+}
+
+button {
+  width: 60vw;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  margin-left: 20%;
+  margin-top: 20px;
+}
+
+#popup {
+  display: flex;
+  opacity: 0;
+  color: black;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.199);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.popup-box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  background-color: rgba(255, 251, 24, 1);
+  border-radius: 20px;
+  animation-name: gr-popup;
+  animation-duration: 1s;
+}
+
+#pop-number {
+  font-size: 0;
+  animation-name: gr-text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+
+#btn-close-popup {
+  margin-left: 0;
+  opacity: 0;
+  border: none;
+  color: white;
+  background-color: rgb(91, 91, 243);
+  width: 400px;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#btn-close-popup:hover {
+  background-color: rgba(253, 253, 253, 1);
+  color: black;
+}
+
+.btn {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 25px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgb(109, 109, 109);
+}
+
+.popup-header {
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes appear {
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes gr-text {
+  to {
+    font-size: 40px;
+  }
+}
+
+@keyframes gr-popup {
+  from {
+    background-color: white;
+    width: 0px;
+    height: 0px;
+  }
+}
