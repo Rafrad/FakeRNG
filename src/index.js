@@ -31,12 +31,10 @@ const closePopup = () => {
 };
 
 const setFakeRand = () => {
-  document.getElementById("number").innerHTML = nextFake();
+  document.getElementById("number").innerHTML = "?";
   document.getElementById("place").innerHTML = number_popup;
   document.getElementById("btn-close-popup").onclick = closePopup;
-  document.getElementById("pop-number").innerHTML = document.getElementById(
-    "number"
-  ).innerHTML;
+  document.getElementById("pop-number").innerHTML = nextFake();
 };
 
 const slowedCountDown = (milisec) => {
